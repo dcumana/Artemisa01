@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Detalle Alquiler</title>
+</h:head>
+<h:body> 
+<h1>Lista de Detalle de Alquileres</h1>
+	<h:form>
+	<h:commandButton value="Nuevo Detalle Alquiler" action="#{detallealquilerBean.nuevo()}"></h:commandButton>
+		<h:dataTable value="#{detallealquilerBean.obtenerTodos()}" var="detallealquiler"> 
+		
+			<h:column>
+				<f:facet name="header"> Id Detalle Alquiler</f:facet>
+				<h:outputText value="#{detallealquiler.iddetalle_Alquiler}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Valor Alquiler</f:facet>
+				<h:outputText value="#{detallealquiler.valorAlquiler}"></h:outputText>
+			</h:column>
+				<h:column>
+				<f:facet name="header"> IVA</f:facet>
+				<h:outputText value="#{detallealquiler.iva}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Creación</f:facet>
+				<h:outputText value="#{detallealquiler.created_at}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Actualización</f:facet>
+				<h:outputText value="#{detallealquiler.updated_at}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Id Alquiler</f:facet>
+				<h:outputText value="#{detallealquiler.alquiler.idAlquiler}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Producto</f:facet>
+				<h:outputText value="#{detallealquiler.producto.nombreProducto}"></h:outputText>
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">Acciones</f:facet>
+				<h:commandButton value="Editar" action="#{detallealquilerBean.editar(idDetalle_alquiler, detallealquiler)}"></h:commandButton>
+				<h:commandButton value="Eliminar" action="#{detallealquilerBean.eliminar(detallealquiler.iddetalle_Alquiler)}"></h:commandButton>
+			</h:column>
+		</h:dataTable> 
+	</h:form>
+</h:body> 
+
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Usuarios</title>
+	
+</h:head>
+<h:body>
+<h1>Lista de empleados</h1>
+<h:form>
+	<h:commandButton value="Nuevo usuario" action="#{usuarioBean.nuevo()}"></h:commandButton>
+	<h:dataTable value="#{usuarioBean.obtenerTodos()}" var="usuarios">
+		<h:column>
+			<f:facet name="header"> Id de Usuario</f:facet>
+			<h:outputText value="#{usuarios.idUsuario}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> Documento del usuario</f:facet>
+			<h:outputText value="#{usuarios.docUsuario}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> nombre del Usuario</f:facet>
+			<h:outputText value="#{usuarios.nombreUsuario}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> email del Usuario</f:facet>
+			<h:outputText value="#{usuarios.emailUsuario}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> Contraseña del usuario</f:facet>
+			<h:outputText value="#{usuarios.contraseña}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> Estado del Usuario</f:facet>
+			<h:outputText value="#{usuarios.estadoUsuario}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Creación</f:facet>
+			<h:outputText value="#{usuarios.created_at}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Actualización</f:facet>
+			<h:outputText value="#{usuarios.updated_at}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header"> Id del Rol</f:facet>
+			<h:outputText value="#{usuarios.idRol.name}"></h:outputText>
+		</h:column>
+
+		<h:column>
+			<f:facet name="header"> Id del Documento</f:facet>
+			<h:outputText value="#{usuarios.idDoc.tipoDoc}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Acciones</f:facet>
+			<h:commandButton value="Editar" action="#{usuarioBean.editar(idUsuario)}"></h:commandButton>
+			<h:commandButton value="Eliminar" action="#{usuarioBean.eliminar(idUsuario)}"></h:commandButton>
+		</h:column>
+	</h:dataTable>
+	</h:form>
+</h:body>
+</html>

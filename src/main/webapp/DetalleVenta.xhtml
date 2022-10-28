@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Detalle Venta</title>
+</h:head>
+<h:body> 
+<h1>Lista de Detalle de Ventas</h1>
+	<h:form>
+	<h:commandButton value="Nuevo Detalle Venta" action="#{detalleventaBean.nuevo()}"></h:commandButton>
+		<h:dataTable value="#{detalleventaBean.obtenerTodos()}" var="detalleventa"> 
+		
+			<h:column>
+				<f:facet name="header"> Id Detalle Venta</f:facet>
+				<h:outputText value="#{detalleventa.idDetalleVenta}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Cantidad Producto</f:facet>
+				<h:outputText value="#{detalleventa.cantidadProducto}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Valor Producto</f:facet>
+				<h:outputText value="#{detalleventa.valorProducto}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> IVA</f:facet>
+				<h:outputText value="#{detalleventa.iva}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Valor Total</f:facet>
+				<h:outputText value="#{detalleventa.valorTotal}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Creación</f:facet>
+				<h:outputText value="#{detalleventa.created_at}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Actualización</f:facet>
+				<h:outputText value="#{detalleventa.updated_at}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Id Venta</f:facet>
+				<h:outputText value="#{detalleventa.venta.idVenta}"></h:outputText>
+			</h:column>
+			<h:column>
+				<f:facet name="header"> Producto</f:facet>
+				<h:outputText value="#{detalleventa.producto.nombreProducto}"></h:outputText>
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">Acciones</f:facet>
+				<h:commandButton value="Editar" action="#{detalleventaBean.editar(idDetalleVenta, detalleventa)}"></h:commandButton>
+				<h:commandButton value="Eliminar" action="#{detalleventaBean.eliminar(detalleventa.idDetalleVenta)}"></h:commandButton>
+			</h:column>
+		</h:dataTable> 
+	</h:form>
+</h:body> 
+
+</html>

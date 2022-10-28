@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <Link rel="stylesheet" href="css/Style.css"></Link> 
+    <link rel="stylesheet" href="iconos/css/all.css"> 
+    <title>Artemisa - Principal</title>
+</head>
+<body>
+
+
+<form onsubmit="return validarUsuario()">
+  Enter name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+
+<script>
+function validarUsuario() {
+  //alert("The form was submitted");
+
+ var url = "http://www.google.com";
+  window.location.href = url;
+  return false;
+  //window.open(url);
+  
+}
+</script>
+
+<!-- 
+ <script>
+    	function validarUsuario() {
+
+
+
+			alert("The form was submitted");
+
+    		// var usuario = document.getElementById("txtUsuario").value;
+    		// var contrasena = document.getElementById("txtContrasena").value;
+
+    		// //if (usuario === "carolinau@gmail.com" ){
+    				
+    				//window.location.href = "https://www.google.com";
+						// return	true;
+
+    		// 	//	return false;
+    		//}
+
+
+    </script> -->
+
+  
+
+</body>
+
+
+
+</html>

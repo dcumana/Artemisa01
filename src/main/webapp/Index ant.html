@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <Link rel="stylesheet" href="css/Style.css"></Link> 
+    <link rel="stylesheet" href="iconos/css/all.css"> 
+    <title>Artemisa Principal</title>
+</head>
+<body>
+
+
+<header>
+	<div class="container-fluid">
+
+		<div class="row align-items-center" align="center">
+			<div class="col justify-content-center">
+				<img src="img/LOGOARTEMISA SYSTEM.jpeg" class="img-responsive" width="150" height="100" alt="">
+			</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-sm">
+
+			 <div class="barranav">		
+				<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
+ 				<!--   <a class="navbar-brand" href="#">
+   					 <img src="img/Logo Artemisa.jpeg" width="100" height="50" alt="">
+ 				 </a> -->
+
+				 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>		
+
+				   <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+				   		<div class="navbar-nav ">
+						   <ul class="navbar-nav mx-auto">
+						   	<li class="nav-item ">
+						      <a class="nav-link text-dark" href="Index.html">Inicio</a>
+						    </li>
+						    <li class="nav-item ">
+						      <a class="nav-link text-dark" href="#">Quienes Somos</a>
+						    </li>
+						    <li class="nav-item">
+						      <a class="nav-link text-dark" href="#">Contacto</a>
+						    </li>
+						    <li class="nav-item">
+						      <a class="nav-link text-dark" href="#">Catálogo</a>
+						    </li>
+						    <li class="nav-item ">
+						      <a class="nav-link text-dark"  data-toggle="modal" data-target="#IngresoModal" data-whatever="@getbootstrap" href="#">Ingresar</a>
+						    </li>
+						  </ul>
+					  </div>
+				  </div>
+				</nav> 
+			 </div>	
+			</div>
+
+		</div>		
+
+	</div>
+</header>
+
+
+<div class="modal fade" id="IngresoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+   <form class="needs-validation" novalidate action="IndexDashBoard.html">
+     
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingresar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label text-dark">Usuario/Email</label>
+            <div class="input-group">
+	            <input type="email" class="form-control" id="recipient-name" required>
+	            <div class="invalid-tooltip">
+	          		Digite un email válido
+	        	</div>
+	        </div>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label text-dark">Contraseña</label>
+            <div class="input-group">
+	            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+	            <div class="invalid-tooltip">
+	          		Digite una contraseña
+	        	</div>
+	        </div>
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+         <button class="btn btn-success" type="submit">Ingresar</button>
+      </div>
+      </form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+    </div>
+  </div>
+</div>
+
+<!-- $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+}) -->
+
+
+
+<div class="container-fluid ">
+	<div class="fondo">
+
+		<div class="row">
+			<div class="col">
+
+			</div>
+		</div>
+	</div>		
+</div>
+
+
+    <Script src="bootstrap-4.6.1-dist/js/jquery.slim.min.js"></Script>
+    <Script src="bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></Script>
+</body>
+
+<div class="piepagina">
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4 text-dark">
+
+
+  <!-- Footer Text -->
+	  <div class="container-fluid text-center text-md-left">
+	    <!-- Grid row -->
+	    <div class="row">
+	      <!-- Grid column -->
+	      <div class="col-md-6 mt-md-0 mt-3">
+	        <!-- Content -->
+	        <h5 class="text-uppercase font-weight-bold">Contacto</h5>
+	        <p>
+	        	<ul class="list-unstyled mb-0 font-weight-bold">
+					<li><i class="fas fa-map-marker-alt"></i>  Cra 24#17-45 2do Piso, Bogotá D.C.</li>
+					<li><i class="fas fa-address-book"></i>  Carolina Umaña - 300 6556858</li>
+					<li><i class="fas fa-address-book"></i>  David Castro - 350 2246584</li>
+					<li><i class="fas fa-address-book"></i>  Gabriel Pedraza - 320 2451954</li>
+					<li><i class="fas fa-address-book"></i>  Kevin Gutierrez - 320 4207547</li>
+				</ul>
+			</p>
+	      </div>
+	      <!-- Grid column -->
+
+	      <hr class="clearfix w-100 d-md-none pb-3">
+
+	      <!-- Grid column -->
+	      <div class="col-md-6 mb-md-0 mb-3">
+
+	        <!-- Content -->
+	        <h5 class="text-uppercase font-weight-bold">ENCUENTRANOS EN...</h5>
+	        <p>
+	        	<ul class="list-unstyled mb-0 font-weight-bold">	
+		        	<li><a href="#" class=""><i class="fab fa-facebook"></i>  @DangelsArtemisa</a></li>
+		            <li><a href="#" class=""><i class="fab fa-instagram"></i>  @DangelsPhotos</a></li>
+		         </ul> 
+	      	</p>
+	      </div>
+	      <!-- Grid column -->
+	    </div>
+	    <!-- Grid row -->
+	  </div>
+	  <!-- Footer Text -->
+	  <!-- Copyright -->
+	  <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
+	    <a href="/"> MDBootstrap.com</a>
+	  </div> -->
+	  <!-- Copyright -->
+</div>  
+</footer>
+<!-- Footer -->
+
+</html>
